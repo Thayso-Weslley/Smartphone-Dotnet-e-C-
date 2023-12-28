@@ -12,3 +12,4 @@ C:\Users\55819\Desktop\Progamação\Dotnet\Texto_Interativo\obj\Debug\net8.0\ref
 C:\Users\55819\Desktop\Progamação\Dotnet\Texto_Interativo\obj\Debug\net8.0\Texto_Interativo.pdb
 C:\Users\55819\Desktop\Progamação\Dotnet\Texto_Interativo\obj\Debug\net8.0\Texto_Interativo.genruntimeconfig.cache
 C:\Users\55819\Desktop\Progamação\Dotnet\Texto_Interativo\obj\Debug\net8.0\ref\Texto_Interativo.dll
+C:\Users\55819\Desktop\Progamação\Dotnet\Texto_Interativo\obj\Debug\net8.0\Texto_Interativo.sourcelink.json

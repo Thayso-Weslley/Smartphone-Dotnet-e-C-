@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\55819\\Desktop\\Progamação\\Dotnet\\Texto_Interativo\\Texto_Interativo.csproj",
-      "projectName": "Texto_Interativo",
-      "projectPath": "C:\\Users\\55819\\Desktop\\Progamação\\Dotnet\\Texto_Interativo\\Texto_Interativo.csproj",
+      "projectUniqueName": "C:\\Users\\55819\\Desktop\\Progamação\\projetosGit\\Desafio2Concluido\\DesafioPOO.csproj",
+      "projectName": "DesafioPOO",
+      "projectPath": "C:\\Users\\55819\\Desktop\\Progamação\\projetosGit\\Desafio2Concluido\\DesafioPOO.csproj",
       "packagesPath": "C:\\Users\\55819\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\55819\\Desktop\\Progamação\\Dotnet\\Texto_Interativo\\obj\\",
+      "outputPath": "C:\\Users\\55819\\Desktop\\Progamação\\projetosGit\\Desafio2Concluido\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\55819\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -9,7 +9,7 @@ Iphone IPhone = new Iphone("(81)99148-8162", "XR", "12345678765432", 64);
 
 Console.Clear();
 Console.Write("Olá!\nSeja bem vindo ao meu código!" +
-                  "\nPara prosseguir preciso que escola um celular, mas pense bem, pois o modelo escolhido será usado até o fim do programa:" +
+                  "\nPara prosseguir preciso que escolha um celular, mas pense bem, pois o modelo escolhido será usado até o fim do programa:" +
                   "\n\n   a) Nokia WindowsPhone \n   b) IPhone XR\n\n" +
                   "Opção: ");
 
@@ -72,20 +72,8 @@ do
         // Desligar Celular e Encerrar o Programa ===================================================================================================
         case "d":
             Console.Clear();
-
-            for(int i = 0; i <= 3; i++)
-            {
-                Console.Clear();
-                Console.Write($"Desligando {celular}");
-                for(int j = 0; j <= 2; j++)
-                {
-                    Console.Write(".");
-                    Thread.Sleep(800);
-                }
-            }
-            
-            Console.WriteLine("\n\n   Thayso: Obrigado por testar meu programa em .Net e C#\n\n");
-            Thread.Sleep(5000);
+            if(celular=="Nokia"){IPhone.Desligar(celular);}
+            if(celular=="IPhone"){IPhone.Desligar(celular);}
             break;
 
         // Tratamento de opção inválida ============================================================================================================
@@ -93,7 +81,5 @@ do
             Console.Clear();
             Console.WriteLine("Opção inválida");
             break;
-
-    
     }
 } while(option != "d");

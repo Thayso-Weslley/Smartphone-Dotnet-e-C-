@@ -20,7 +20,9 @@ namespace DesafioPOO.Models
             Memoria = memoria;
         }
 
-        // relogio interno ==============================================================================================================================
+        // Funções estáticas ================================================================================================================================
+            
+            // relogio interno ==============================================================================================================================
         
         static private void Tempo()
         {
@@ -55,23 +57,28 @@ namespace DesafioPOO.Models
                 }
             }
         }
+            // Espera para que uma ação aconteça =======================================================================================================
+        static public void AcaoDeEspera(string Texto, int NumeroDePontos, int Vezes, int Milisegundos)
+        {
+            for(int i = 0; i < Vezes; i++)
+            {
+                Console.Clear();
+                Console.Write(Texto);
+                for(int j = 0; j < NumeroDePontos; j++)
+                {
+                    Console.Write(".");
+                    Thread.Sleep(Milisegundos);
+                }
+            }
+            Console.Clear();
+        }
+
         // Métodos ======================================================================================================================================
         
             // Fazer Ligação ============================================================================================================================
         public void Ligar()
         {
-            for(int i = 0; i <= 3; i++)
-            {
-                Console.Clear();
-                Console.Write("Ligando");
-                for(int j = 0; j <= 3; j++)
-                {
-                    Console.Write(".");
-                    Thread.Sleep(1000);
-                }
-            }
-            
-            Console.Clear();
+            AcaoDeEspera("Ligando", 3, 3, 800);
             Console.WriteLine("   O número que você ligou não está atendendo, nem possue caixa postal. \n   Por favor, tente mais tarde.\n");
             Thread.Sleep(5000);
         }
@@ -79,7 +86,6 @@ namespace DesafioPOO.Models
             // Receber Ligação =========================================================================================================================
         public void ReceberLigacao()
         {
-
             Console.Clear();
             while(true)
             {
@@ -90,19 +96,7 @@ namespace DesafioPOO.Models
 
                 if(call == "s")
                 {
-                    Console.Clear();
-                    for(int i = 0; i <= 3; i++)
-                    {
-                        Console.Clear();
-                        Console.Write("Atendendo Ligação");
-                        for(int j = 0; j <= 4; j++)
-                        {
-                            Console.Write(".");
-                            Thread.Sleep(100);
-                        }
-                    }
-
-                    Console.Clear();
+                    AcaoDeEspera("Atendendo Ligação", 3, 3, 100);
                     Tempo();
                     break;
                 }
@@ -113,7 +107,7 @@ namespace DesafioPOO.Models
                 {
                     Console.Clear();
                     Console.Write("Ligação Recusada.\n\n");
-                    Thread.Sleep(5000);
+                    Thread.Sleep(3500);
                     break;
                 }
 
@@ -123,11 +117,20 @@ namespace DesafioPOO.Models
                 {
                     Console.Clear();
                     Console.WriteLine("Essa opção não é válida!\n");
-                    Thread.Sleep(5000);
+                    Thread.Sleep(3500);
                 }
             }
         }
 
+            // Desligar Celular =========================================================================================================================
+
+        public void Desligar(string celular)
+        {
+            AcaoDeEspera($"Desligando {celular}", 4, 4, 800);
+            Console.WriteLine("\n\n   Thayso: Obrigado por testar meu programa em .Net e C#\n\n");
+            Thread.Sleep(5000);
+        }
+            
             // Instalar Aplicativo ======================================================================================================================
 
         public abstract void InstalarAplicativo(string nomeApp);

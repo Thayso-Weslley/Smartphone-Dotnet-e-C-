@@ -22,7 +22,7 @@ namespace DesafioPOO.Models
 
         // Funções estáticas ================================================================================================================================
             
-            // relogio interno ==============================================================================================================================
+            // Duração da Chamada Recebida ==============================================================================================================================
         
         static private void Tempo()
         {
@@ -58,7 +58,7 @@ namespace DesafioPOO.Models
             }
         }
             // Espera para que uma ação aconteça =======================================================================================================
-        static public void AcaoDeEspera(string Texto, int NumeroDePontos, int Vezes, int Milisegundos)
+        static private void AcaoDeEspera(string Texto, int NumeroDePontos, int Vezes, int Milisegundos)
         {
             for(int i = 0; i < Vezes; i++)
             {

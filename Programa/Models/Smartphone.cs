@@ -64,6 +64,7 @@ namespace DesafioPOO.Models
             {
                 Console.Clear();
                 Console.Write(Texto);
+                Thread.Sleep(Milisegundos);
                 for(int j = 0; j < NumeroDePontos; j++)
                 {
                     Console.Write(".");
@@ -78,9 +79,9 @@ namespace DesafioPOO.Models
             // Fazer Ligação ============================================================================================================================
         public void Ligar()
         {
-            AcaoDeEspera("Ligando", 3, 3, 800);
+            AcaoDeEspera("Ligando", 3, 4, 800);
             Console.WriteLine("   O número que você ligou não está atendendo, nem possue caixa postal. \n   Por favor, tente mais tarde.\n");
-            Thread.Sleep(5000);
+            Thread.Sleep(3500);
         }
 
             // Receber Ligação =========================================================================================================================
@@ -96,7 +97,7 @@ namespace DesafioPOO.Models
 
                 if(call == "s")
                 {
-                    AcaoDeEspera("Atendendo Ligação", 3, 3, 100);
+                    AcaoDeEspera("Atendendo Ligação", 3, 4, 100);
                     Tempo();
                     break;
                 }
@@ -126,7 +127,7 @@ namespace DesafioPOO.Models
 
         public void Desligar(string celular)
         {
-            AcaoDeEspera($"Desligando {celular}", 4, 4, 800);
+            AcaoDeEspera($"Desligando {celular}", 4, 4, 500);
             Console.WriteLine("\n\n   Thayso: Obrigado por testar meu programa em .Net e C#\n\n");
             Thread.Sleep(5000);
         }

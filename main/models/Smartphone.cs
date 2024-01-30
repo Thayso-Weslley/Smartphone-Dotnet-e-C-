@@ -2,7 +2,7 @@ using System.Globalization;
 using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 
-namespace DesafioPOO.Models
+namespace main.Models
 {
     public abstract class Smartphone
     {
@@ -18,6 +18,12 @@ namespace DesafioPOO.Models
             Modelo = modelo;
             IMEI = imei;
             Memoria = memoria;
+        }
+        public Smartphone(){
+            Numero = "";
+            Modelo = "";
+            IMEI = "";
+            Memoria = 0;
         }
 
         // Funções estáticas ================================================================================================================================

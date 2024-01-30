@@ -1,16 +1,16 @@
-﻿using DesafioPOO.Models;
+﻿using main.Models;
 
 // Instâncias ========================================================================================================================================
 
 Nokia nokia = new Nokia("(81)98411-5541", "WIndowsPhone", "89789789789", 256);
-Iphone IPhone = new Iphone("(81)99148-8162", "XR", "12345678765432", 64);
+Iphone iPhone = new Iphone("(81)99148-8162", "XR", "12345678765432", 64);
 
 // Escolher o SmartPhone =============================================================================================================================
 
 Console.Clear();
 Console.Write("Olá!\nSeja bem vindo ao meu código!" +
                   "\nPara prosseguir preciso que escolha um celular, mas pense bem, pois o modelo escolhido será usado até o fim do programa:" +
-                  "\n\n   a) Nokia WindowsPhone \n   b) IPhone XR\n\n" +
+                  "\n\n   a) Nokia WindowsPhone \n   b) iPhone XR\n\n" +
                   "Opção: ");
 
 string celular = Console.ReadLine().ToLower().Trim();
@@ -18,7 +18,7 @@ while(celular != "a" && celular != "b")
 {
     Console.Clear();
     Console.Write("   Escolha inválida!\n   Para proceguir com o programa, preciso que escolha um dos modelos abaixo:"+
-                  "\n\n   a) Nokia WindowsPhone \n   b) IPhone XR\n\n" +
+                  "\n\n   a) Nokia WindowsPhone \n   b) iPhone XR\n\n" +
                   "Opção: ");
 
     celular = Console.ReadLine().ToLower().Trim();
@@ -32,7 +32,7 @@ if(celular == "a")
 }
 if(celular == "b")
 {
-    celular = "IPhone";
+    celular = "iPhone";
     Console.WriteLine($"   Ótimo!\n   Você escolheu o {celular} XR\n");
 }
 
@@ -51,29 +51,41 @@ do
         // Fazer Ligação ============================================================================================================================
         case "a":
             if(celular=="Nokia"){nokia.Ligar();}
-            if(celular=="IPhone"){IPhone.Ligar();}
+            if(celular=="iPhone"){iPhone.Ligar();}
             break;
 
         // Receber Ligação ==========================================================================================================================
         case "b":
             if(celular=="Nokia"){nokia.ReceberLigacao();}
-            if(celular=="IPhone"){IPhone.ReceberLigacao();}
+            if(celular=="iPhone"){iPhone.ReceberLigacao();}
             break;
 
         // Intalar Aplicativo =======================================================================================================================
         case "c":
             Console.Clear();
-            Console.Write("   Escreva o nome do applicativo que você deseja installar: ");
-            string App = Console.ReadLine().Trim();
-            if(celular=="Nokia"){nokia.InstalarAplicativo(App);}
-            if(celular=="IPhone"){IPhone.InstalarAplicativo(App);}
+            
+            while(true)
+            {
+                Console.Write("   Escreva o nome do applicativo que você deseja installar: ");
+                string App = Console.ReadLine().Trim();
+                if(App == "")
+                {
+                    Console.Clear();
+                    Console.Write("  Para o Bom funcionamento do sistema, preciso que digite o nome do aplicativo para ser baixado\n  String vazia não será aceita.\n\n");
+                } else {
+                    if(celular=="Nokia"){nokia.InstalarAplicativo(App);}
+                    if(celular=="iPhone"){iPhone.InstalarAplicativo(App);}
+                    break;
+                }
+            }
+            
             break;
 
         // Desligar Celular e Encerrar o Programa ===================================================================================================
         case "d":
             Console.Clear();
-            if(celular=="Nokia"){IPhone.Desligar(celular);}
-            if(celular=="IPhone"){IPhone.Desligar(celular);}
+            if(celular=="Nokia"){iPhone.Desligar(celular);}
+            if(celular=="iPhone"){iPhone.Desligar(celular);}
             break;
 
         // Tratamento de opção inválida ============================================================================================================

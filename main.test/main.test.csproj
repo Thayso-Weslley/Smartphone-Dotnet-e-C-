@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Programa\DesafioPOO.csproj" />
+    <ProjectReference Include="..\main\main.csproj" />
   </ItemGroup>
 
 </Project>

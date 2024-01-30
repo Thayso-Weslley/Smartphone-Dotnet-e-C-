@@ -1,10 +1,12 @@
-namespace DesafioPOO.Models
+using main.Models;
+
+namespace main.Models
 {
     // // Classe Herdada de Smartphone ==========================================================================================
     public class Iphone : Smartphone
     {
         public Iphone(string numero, string modelo, string imei, int memoria) : base(numero, modelo, imei, memoria){}
-
+        public Iphone(){}
         // Método InstalarAplicativo() sobrescrito ==============================================================================
         public override void InstalarAplicativo(string nomeApp)
         {

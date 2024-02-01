@@ -140,6 +140,6 @@ namespace main.Models
             
             // Instalar Aplicativo ======================================================================================================================
 
-        public abstract void InstalarAplicativo(string nomeApp);
+        public abstract void InstalarAplicativo();
     }
 }

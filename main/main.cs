@@ -64,20 +64,10 @@ do
         case "c":
             Console.Clear();
             
-            while(true)
-            {
-                Console.Write("   Escreva o nome do applicativo que você deseja installar: ");
-                string App = Console.ReadLine().Trim();
-                if(App == "")
-                {
-                    Console.Clear();
-                    Console.Write("  Para o Bom funcionamento do sistema, preciso que digite o nome do aplicativo para ser baixado\n  String vazia não será aceita.\n\n");
-                } else {
-                    if(celular=="Nokia"){nokia.InstalarAplicativo(App);}
-                    if(celular=="iPhone"){iPhone.InstalarAplicativo(App);}
-                    break;
-                }
-            }
+                // Console.Write("   Escreva o nome do applicativo que você deseja installar: ");
+                // string App = Console.ReadLine().Trim();
+                if(celular=="Nokia"){nokia.InstalarAplicativo();}
+                if(celular=="iPhone"){iPhone.InstalarAplicativo();}
             
             break;
 

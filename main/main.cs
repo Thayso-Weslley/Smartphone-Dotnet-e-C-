@@ -68,7 +68,7 @@ do
 
         // Desligar Celular e Encerrar o Programa ===================================================================================================
         case "d":
-            if(celular=="Nokia"){iPhone.Desligar(celular);}
+            if(celular=="Nokia"){nokia.Desligar(celular);}
             if(celular=="iPhone"){iPhone.Desligar(celular);}
             break;
 

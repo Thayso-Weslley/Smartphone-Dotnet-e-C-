@@ -62,18 +62,12 @@ do
 
         // Intalar Aplicativo =======================================================================================================================
         case "c":
-            Console.Clear();
-            
-                // Console.Write("   Escreva o nome do applicativo que você deseja installar: ");
-                // string App = Console.ReadLine().Trim();
-                if(celular=="Nokia"){nokia.InstalarAplicativo();}
-                if(celular=="iPhone"){iPhone.InstalarAplicativo();}
-            
+            if(celular=="Nokia"){nokia.InstalarAplicativo();}
+            if(celular=="iPhone"){iPhone.InstalarAplicativo();}
             break;
 
         // Desligar Celular e Encerrar o Programa ===================================================================================================
         case "d":
-            Console.Clear();
             if(celular=="Nokia"){iPhone.Desligar(celular);}
             if(celular=="iPhone"){iPhone.Desligar(celular);}
             break;
@@ -81,7 +75,7 @@ do
         // Tratamento de opção inválida ============================================================================================================
         default:
             Console.Clear();
-            Console.WriteLine("Opção inválida");
+            Console.WriteLine("Opção inválida!");
             break;
     }
 } while(option != "d");

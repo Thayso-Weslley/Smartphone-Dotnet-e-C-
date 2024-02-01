@@ -12,6 +12,7 @@ namespace main.Models
         {
             // Instalando Aplicativo ==========================================================================================
             
+            Console.Clear();
             while(true)
             {
                 Console.Write("   Escreva o nome do applicativo que você deseja installar: ");

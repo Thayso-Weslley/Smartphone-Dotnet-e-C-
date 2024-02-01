@@ -133,6 +133,7 @@ namespace main.Models
 
         public void Desligar(string celular)
         {
+            Console.Clear();
             AcaoDeEspera($"Desligando {celular}", 4, 4, 500);
             Console.WriteLine("\n\n   Thayso: Obrigado por testar meu programa em .Net e C#\n\n");
             Thread.Sleep(5000);
